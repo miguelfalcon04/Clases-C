@@ -245,9 +245,181 @@ namespace Clases_C
             } while (opcion != 8);
         }
 
+        public class Cancion
+        {
+            private string titulo;
+            private string autor;
+            public Cancion(string titulo, string autor)
+            {
+                this.titulo = titulo;
+                this.autor = autor;
+            }
+
+            public Cancion()
+            {
+                this.titulo = "";
+                this.autor = "";
+            }
+
+            public string DameTitulo()
+            {
+                return titulo;
+            }
+
+            public void PonTitulo(string titulo)
+            {
+                this.titulo = titulo;
+            }
+
+            public string DameAutor()
+            {
+                return autor;
+            }
+
+            public void PonAutor(string autor)
+            {
+                this.autor = autor;
+            }
+
+            public override string ToString()
+            {
+                return $"Título: {titulo}, Autor: {autor}";
+            }
+        }
+
+        public class CD
+        {
+            private Cancion[] canciones;
+            private int contador;
+
+            public CD(int capacidad = 10)
+            {
+                canciones = new Cancion[capacidad];
+                contador = 0;
+            }
+
+            public int NumeroCanciones()
+            {
+                return contador;
+            }
+
+            public Cancion DameCancion(int posicion)
+            {
+                if (posicion < 0 || posicion >= contador)
+                {
+                    Console.WriteLine("Posición fuera de rango");
+                    return null;
+                }
+                return canciones[posicion];
+            }
+
+            public void GrabaCancion(int posicion, Cancion nuevaCancion)
+            {
+                if (posicion < 0 || posicion >= contador)
+                {
+                    Console.WriteLine("Posición fuera de rango");
+                    return;
+                }
+                canciones[posicion] = nuevaCancion;
+            }
+
+            public void Agrega(Cancion nuevaCancion)
+            {
+                if (contador >= canciones.Length)
+                {
+                    Console.WriteLine("No se pueden agregar más canciones, el CD está lleno.");
+                    return;
+                }
+                canciones[contador] = nuevaCancion;
+                contador++;
+            }
+
+            public void Elimina(int posicion)
+            {
+                if (posicion < 0 || posicion >= contador)
+                {
+                    Console.WriteLine("Posición fuera de rango");
+                    return;
+                }
+
+                for (int i = posicion; i < contador - 1; i++)
+                {
+                    canciones[i] = canciones[i + 1];
+                }
+                canciones[contador - 1] = null;
+                contador--;
+            }
+
+            public void ListarCanciones()
+            {
+                Console.WriteLine("Canciones en el CD:");
+                for (int i = 0; i < contador; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {canciones[i]}");
+                }
+            }
+        }
+
+        public class Juego
+        {
+            public int Vidas { get; private set; }
+
+            public Juego(int vidasIniciales)
+            {
+                Vidas = vidasIniciales;
+            }
+
+            public void PerderVida()
+            {
+                if (Vidas > 0)
+                {
+                    Vidas--;
+                    Console.WriteLine($"Has perdido una vida. Vidas restantes: {Vidas}");
+                }
+                else
+                {
+                    Console.WriteLine("No tienes más vidas.");
+                }
+            }
+
+            public void MostrarVidas()
+            {
+                Console.WriteLine($"Vidas restantes: {Vidas}");
+            }
+        }
+
+        static void eje05()
+        {
+            Cancion cancion1 = new Cancion("Bohemian Rhapsody", "Queen");
+            Cancion cancion2 = new Cancion("Imagine", "John Lennon");
+
+            Console.WriteLine(cancion1);
+            Console.WriteLine(cancion2);
+
+            CD miCD = new CD(5);
+            miCD.Agrega(cancion1);
+            miCD.Agrega(cancion2);
+
+            miCD.ListarCanciones();
+
+            miCD.Elimina(1);
+            miCD.ListarCanciones();
+
+            Cancion cancion3 = new Cancion("Smells Like Teen Spirit", "Nirvana");
+            miCD.Agrega(cancion3);
+            miCD.GrabaCancion(0, new Cancion("Stairway to Heaven", "Led Zeppelin"));
+            miCD.ListarCanciones();
+
+            Juego juego = new Juego(3);
+            juego.MostrarVidas();
+            juego.PerderVida();
+            juego.PerderVida();
+            juego.MostrarVidas();
+        }
+
         static void Main(string[] args)
         {
-            eje02();
+            eje05();
         }
     }
 }
