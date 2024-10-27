@@ -1,0 +1,9 @@
+C:\Users\falco\source\repos\Clases C\Clases C\bin\Debug\Clases C.exe.config
+C:\Users\falco\source\repos\Clases C\Clases C\bin\Debug\Clases C.exe
+C:\Users\falco\source\repos\Clases C\Clases C\bin\Debug\Clases C.pdb
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.csproj.AssemblyReference.cache
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases_C.Properties.Resources.resources
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.csproj.GenerateResource.cache
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.csproj.CoreCompileInputs.cache
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.exe
+C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.pdb
