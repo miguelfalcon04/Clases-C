@@ -7,3 +7,12 @@ C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.csproj.Generate
 C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.csproj.CoreCompileInputs.cache
 C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.exe
 C:\Users\falco\source\repos\Clases C\Clases C\obj\Debug\Clases C.pdb
+C:\Users\mfalcar0506\Source\Repos\Clases-C\bin\Debug\Clases C.exe.config
+C:\Users\mfalcar0506\Source\Repos\Clases-C\bin\Debug\Clases C.exe
+C:\Users\mfalcar0506\Source\Repos\Clases-C\bin\Debug\Clases C.pdb
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases C.csproj.AssemblyReference.cache
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases_C.Properties.Resources.resources
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases C.csproj.GenerateResource.cache
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases C.csproj.CoreCompileInputs.cache
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases C.exe
+C:\Users\mfalcar0506\Source\Repos\Clases-C\obj\Debug\Clases C.pdb
